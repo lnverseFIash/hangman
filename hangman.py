@@ -7,7 +7,7 @@ WORDS = None
 def openFile(category):
     global WORDS
 
-    with open (f'/Users/shash/STUFF/programming/python/hangman/{category}WordsList.txt') as filename:
+    with open (f'./{category}WordsList.txt') as filename:
         wordBank = filename.read() 
     WORDS = wordBank.split(',')
 
@@ -34,9 +34,8 @@ elif difficulty == 'animals':
 
 else:
     print('that is not an option. choosing LONG')
-    WORDS = words.words()
+    openFile('long')
     sleep(1)
-print('hello' in WORDS)
 
 GRAPHICS = [
     '   ┍━━━━━┓ \n   │     ┃ \n         ┃ \n         ┃ \n         ┃ \n         ┃ \n         ┃ \n         ┃ \n ━━━━━━━━┻━━━━━━━      ',
